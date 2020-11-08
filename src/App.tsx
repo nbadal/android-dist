@@ -80,8 +80,8 @@ function App() {
                             return row;
                         })}
                     </div>
-                    <div className="Updated" onClick={() => setRefreshTime(Date.now)}>
-                        Last Updated by Google: <span>{lastModified}</span>
+                    <div className="Footer" onClick={() => setRefreshTime(Date.now)}>
+                        <a href="https://github.com/nbadal/android-dist">Github</a> | Last Updated by Google: <span>{lastModified}</span>
                     </div>
                 </>
             )}
