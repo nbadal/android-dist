@@ -2,6 +2,7 @@
   "name": "android-dist",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nbadal.github.io/android-dist/",
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
