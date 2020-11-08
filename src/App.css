@@ -1,5 +1,4 @@
 .App {
-  background-color: #282C34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,7 +10,7 @@
 
 .List {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
 }
 
 .List > div {
@@ -19,7 +18,8 @@
 }
 
 .Header {
-  font-size: calc(1.5vmin);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: calc(2vmin);
 }
 
 .version, .apiLevel {
@@ -31,5 +31,7 @@
 }
 
 .Updated {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.5);
   font-size: calc(1.5vmin);
 }
