@@ -16,7 +16,7 @@ type DescriptionBlock = {
 }
 
 const colors = [
-    "#d3ded3",
+    "#D3DED3",
     "#7DC691",
     "#92B2B7",
     "#DEBA40",
@@ -49,11 +49,11 @@ function App() {
             })
     }, [refreshTime]);
 
-    let percentage = 1.0
+    let cumulative = 1.0
     return (
         <div className="App">
             {fetchError && (
-                <div>{fetchError}</div>
+                <div>Couldn't load latest stats: {fetchError}</div>
             )}
             {distributions.length > 0 && (
                 <>
@@ -69,14 +69,14 @@ function App() {
                             }
                             const row = (
                                 <React.Fragment key={d.apiLevel}>
-                                    <div className="version" style={style}>{d.version}</div>
+                                    <div className="Version" style={style}>{d.version}</div>
                                     <div style={style}>{d.name}</div>
-                                    <div className="apiLevel" style={style}>{d.apiLevel}</div>
+                                    <div className="ApiLevel" style={style}>{d.apiLevel}</div>
                                     <div style={style}>{(d.distributionPercentage * 100).toFixed(1)}%</div>
-                                    <div style={style}>{(percentage * 100).toFixed(1)}%</div>
+                                    <div style={style}>{(cumulative * 100).toFixed(1)}%</div>
                                 </React.Fragment>
                             );
-                            percentage -= d.distributionPercentage;
+                            cumulative -= d.distributionPercentage;
                             return row;
                         })}
                     </div>
