@@ -14,7 +14,7 @@
   grid-row-gap: 2px;
 }
 
-.List > div {
+.List > * {
   padding: 8px 16px;
 }
 

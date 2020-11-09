@@ -70,7 +70,7 @@ function App() {
                             const row = (
                                 <React.Fragment key={d.apiLevel}>
                                     <div className="Version" style={style}>{d.version}</div>
-                                    <div style={style}>{d.name}</div>
+                                    <a style={style} href={d.url}>{d.name}</a>
                                     <div className="ApiLevel" style={style}>{d.apiLevel}</div>
                                     <div style={style}>{(d.distributionPercentage * 100).toFixed(1)}%</div>
                                     <div style={style}>{(cumulative * 100).toFixed(1)}%</div>
