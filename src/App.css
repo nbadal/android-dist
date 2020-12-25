@@ -29,7 +29,7 @@
   text-align: center;
 }
 
-.Footer {
+.Footer, .Footer > a {
   margin: 8px 0;
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.5vmin;
