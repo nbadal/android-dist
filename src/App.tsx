@@ -34,9 +34,8 @@ function App() {
     const [fetchError, setFetchError] = useState<string | null>(null);
 
     useEffect(() => {
-        const proxy = "https://cors-anywhere.herokuapp.com/"
-        const url = "https://dl.google.com/android/studio/metadata/distributions.json";
-        fetch(proxy + url)
+        const url = "https://us-central1-android-distro.cloudfunctions.net/distros";
+        fetch(url)
             .then(res => res.json().then(data => [data, res.headers.get("Last-Modified")]))
             .then(([data, modified]) => {
                 setDistributions(data);
