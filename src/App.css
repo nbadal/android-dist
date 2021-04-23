@@ -11,11 +11,16 @@
 .List {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  grid-row-gap: 2px;
 }
 
 .List > * {
   padding: 8px 16px;
+}
+
+.Spacer {
+  grid-column: 1 / -1;
+  padding: 0;
+  height: 3px;
 }
 
 .Header {
@@ -33,4 +38,25 @@
   margin: 8px 0;
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.5vmin;
+}
+
+.Detail {
+  grid-column: 1 / -1;
+  max-height: 100px;
+  overflow-y: scroll;
+}
+
+.Link {
+  font-size: 2vmin;
+  text-decoration: underline;
+}
+
+.DetailBock {
+  font-size: 2vmin;
+  max-width: 600px;
+  margin-bottom: 8px;
+}
+
+.DetailTitle {
+  font-weight: bold;
 }

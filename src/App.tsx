@@ -32,6 +32,7 @@ function App() {
     const [distributions, setDistributions] = useState<Distribution[]>([]);
     const [lastModified, setLastModified] = useState("");
     const [fetchError, setFetchError] = useState<string | null>(null);
+    const [expandedDetail, setExpandedDetail] = useState<number | null>(null);
 
     useEffect(() => {
         const url = "https://us-central1-android-distro.cloudfunctions.net/distros";
@@ -63,16 +64,47 @@ function App() {
                         <div className="Header">% of Distribution</div>
                         <div className="Header">Cumulative Distribution</div>
                         {distributions.map((d, idx) => {
+                            const isSelected = idx === expandedDetail;
                             const style: CSSProperties = {
-                                backgroundColor: colors[idx % colors.length]
+                                backgroundColor: colors[idx % colors.length],
+                                cursor: "pointer",
                             }
+                            const detailStyle: CSSProperties = {
+                                display: isSelected ? "block" : "none",
+                                backgroundColor: colors[idx % colors.length],
+                            }
+                            const onClick = () => setExpandedDetail(isSelected ? null : idx);
                             const row = (
                                 <React.Fragment key={d.apiLevel}>
-                                    <div className="Version" style={style}>{d.version}</div>
-                                    <a style={style} href={d.url}>{d.name}</a>
-                                    <div className="ApiLevel" style={style}>{d.apiLevel}</div>
-                                    <div style={style}>{(d.distributionPercentage * 100).toFixed(1)}%</div>
-                                    <div style={style}>{(cumulative * 100).toFixed(1)}%</div>
+                                    <div className="Version" style={style} onClick={onClick}>{d.version}</div>
+                                    <div style={style} onClick={onClick} >{d.name}</div>
+                                    <div className="ApiLevel" style={style} onClick={onClick}>{d.apiLevel}</div>
+                                    <div style={style} onClick={onClick}>{(d.distributionPercentage * 100).toFixed(1)}%</div>
+                                    <div style={style} onClick={onClick}>{(cumulative * 100).toFixed(1)}%</div>
+                                    <div className="Detail" style={detailStyle}>
+                                        <a className="Link" href={d.url}>Release Notes</a>
+                                        {d.descriptionBlocks.map((block) => (
+                                            <div className="DetailBock">
+                                                <div className="DetailTitle">{block.title}</div>
+                                                <div className="DetailBody">{
+                                                    // Make <br>'s functional.
+                                                    block.body.split("<br>").map((text, i) => {
+                                                        if (i === 0) {
+                                                            return (<span>{text}</span>);
+                                                        } else {
+                                                            return (
+                                                                <>
+                                                                    <br />
+                                                                    <span>{text}</span>
+                                                                </>
+                                                            );
+                                                        }
+                                                    })
+                                                }</div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <div className="Spacer"/>
                                 </React.Fragment>
                             );
                             cumulative -= d.distributionPercentage;
