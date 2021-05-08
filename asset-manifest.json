@@ -3,18 +3,18 @@
     "main.css": "/android-dist/static/css/main.4a3eb0fe.chunk.css",
     "main.js": "/android-dist/static/js/main.795cf129.chunk.js",
     "main.js.map": "/android-dist/static/js/main.795cf129.chunk.js.map",
-    "runtime-main.js": "/android-dist/static/js/runtime-main.eb43ada2.js",
-    "runtime-main.js.map": "/android-dist/static/js/runtime-main.eb43ada2.js.map",
+    "runtime-main.js": "/android-dist/static/js/runtime-main.3f65c79d.js",
+    "runtime-main.js.map": "/android-dist/static/js/runtime-main.3f65c79d.js.map",
     "static/js/2.eccf95d3.chunk.js": "/android-dist/static/js/2.eccf95d3.chunk.js",
     "static/js/2.eccf95d3.chunk.js.map": "/android-dist/static/js/2.eccf95d3.chunk.js.map",
-    "static/js/3.caa9c597.chunk.js": "/android-dist/static/js/3.caa9c597.chunk.js",
-    "static/js/3.caa9c597.chunk.js.map": "/android-dist/static/js/3.caa9c597.chunk.js.map",
+    "static/js/3.fc9a4ef1.chunk.js": "/android-dist/static/js/3.fc9a4ef1.chunk.js",
+    "static/js/3.fc9a4ef1.chunk.js.map": "/android-dist/static/js/3.fc9a4ef1.chunk.js.map",
     "index.html": "/android-dist/index.html",
     "static/css/main.4a3eb0fe.chunk.css.map": "/android-dist/static/css/main.4a3eb0fe.chunk.css.map",
     "static/js/2.eccf95d3.chunk.js.LICENSE.txt": "/android-dist/static/js/2.eccf95d3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.eb43ada2.js",
+    "static/js/runtime-main.3f65c79d.js",
     "static/js/2.eccf95d3.chunk.js",
     "static/css/main.4a3eb0fe.chunk.css",
     "static/js/main.795cf129.chunk.js"
