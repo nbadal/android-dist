@@ -113,6 +113,7 @@ function App() {
                     </div>
                     <div className="Footer" onClick={() => setRefreshTime(Date.now)}>
                         <a href="https://github.com/nbadal/android-dist">Github</a> | Last Updated by Google: <span>{lastModified}</span>
+                        {lastModified.includes("2020") && (<span> (yes it really has been that long...)</span>)}
                     </div>
                 </>
             )}
