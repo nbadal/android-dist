@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/android-dist/static/css/main.4a3eb0fe.chunk.css",
-    "main.js": "/android-dist/static/js/main.795cf129.chunk.js",
-    "main.js.map": "/android-dist/static/js/main.795cf129.chunk.js.map",
+    "main.js": "/android-dist/static/js/main.6ecddcaa.chunk.js",
+    "main.js.map": "/android-dist/static/js/main.6ecddcaa.chunk.js.map",
     "runtime-main.js": "/android-dist/static/js/runtime-main.b7c4f49d.js",
     "runtime-main.js.map": "/android-dist/static/js/runtime-main.b7c4f49d.js.map",
     "static/js/2.eccf95d3.chunk.js": "/android-dist/static/js/2.eccf95d3.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.b7c4f49d.js",
     "static/js/2.eccf95d3.chunk.js",
     "static/css/main.4a3eb0fe.chunk.css",
-    "static/js/main.795cf129.chunk.js"
+    "static/js/main.6ecddcaa.chunk.js"
   ]
 }
