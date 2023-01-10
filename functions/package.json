@@ -15,7 +15,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "axios": "^0.21.2",
-    "firebase-admin": "^11.0.1",
+    "firebase-admin": "^11.4.1",
     "firebase-functions": "^3.24.0"
   },
   "devDependencies": {
