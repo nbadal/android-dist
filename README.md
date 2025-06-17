@@ -1,4 +1,4 @@
-<img src='/public/logo192.png?raw=true' alt="plugin icon" width='128' />
+<img src='/src/app/icon.png?raw=true' alt="plugin icon" width='128' />
 
 # Android Platform Distribution
 

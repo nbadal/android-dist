@@ -84,19 +84,19 @@ function App() {
                                     <div className="Detail" style={detailStyle}>
                                         <a className="Link" href={d.url}>Release Notes</a>
                                         {d.descriptionBlocks.map((block) => (
-                                            <div className="DetailBock">
+                                            <div className="DetailBock" key={block.title}>
                                                 <div className="DetailTitle">{block.title}</div>
                                                 <div className="DetailBody">{
                                                     // Make <br>'s functional.
                                                     block.body.split("<br>").map((text, i) => {
                                                         if (i === 0) {
-                                                            return (<span>{text}</span>);
+                                                            return (<span key={i}>{text}</span>);
                                                         } else {
                                                             return (
-                                                                <>
+                                                                <React.Fragment key={i}>
                                                                     <br />
                                                                     <span>{text}</span>
-                                                                </>
+                                                                </React.Fragment>
                                                             );
                                                         }
                                                     })
