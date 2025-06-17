@@ -1,5 +1,5 @@
 import React, { CSSProperties, useEffect, useState } from 'react';
-import './App.css';
+import './app.css';
 
 type Distribution = {
     name: string,

@@ -1,4 +1,4 @@
-import '../index.css'
+import './global.css'
 import {Metadata, Viewport} from "next";
 
 export const metadata: Metadata = {
